@@ -1,0 +1,16 @@
+client.id: string @index(exact) .
+client.name: string @index(term) .
+account.id: string @index(exact) .
+device.id: string @index(exact) .
+ip.id: string @index(exact) .
+transaction.id: string @index(exact) .
+transaction.amount: float @index(float) .
+transaction.time: datetime @index(hour) .
+alert.id: string @index(exact) .
+
+client.account: uid @reverse .
+account.transaction: uid @reverse .
+transaction.device: uid @reverse .
+transaction.ip: uid @reverse .
+client.device: uid @reverse .
+client.ip: uid @reverse .
