@@ -1,0 +1,4 @@
+pymongo
+cassandra-driver
+pydgraph
+python-dotenv
